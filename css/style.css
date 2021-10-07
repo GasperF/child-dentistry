@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+header
+{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0px;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+}
+/* Hamburger */
+.toggle
+{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active
+{
+  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+/* Hamburger */
+
+.showcase
+{
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(109, 0, 0);
+  transition: 0.5s;
+  z-index: 2;
+}
+.showcase.active
+{
+  right: 300px;
+}
+.showcase header img{
+  position: relative;
+  width: 3.5em;
+  height: 3.5em;
+  float: left;
+  margin: 10px 10px 10px 10px;
+  cursor: pointer;
+  filter: invert(1);
+}
+.showcase header .logo
+{
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.showcase img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* opacity: 0.8; */
+}
+
+/* .overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #48a7ff;
+  mix-blend-mode: overlay;
+} */
+.text
+{
+  position:relative;
+  z-index: 10;
+}
+
+.showcase .text h2,
+.showcase .text h3
+{
+    float: right;
+    text-align: center;
+    padding-left: 90%;
+    padding-right: 0%;
+    text-align: right;
+    font-size: 6em;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text2 h4
+{
+  display: flex;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: 2.5em;
+    margin: 0;
+    padding: 1%;
+    padding-left: 0%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(233, 134, 4);
+    text-transform: uppercase;
+    line-height: 100%;
+
+}
+.schedule-section{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: #fff;
+  top: 30px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+.menu
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  align-items: center;
+}
+.menu ul
+{
+  position: relative;
+}
+.menu ul li
+{
+  padding: 3.5em;
+  list-style: none;
+}
+.menu ul li a
+{
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover
+{
+  font-weight: bold;
+  color: rgb(233, 134, 4); 
+}
+
+@media (max-width: 991px)
+  {
+    .showcase,
+    .showcase header,
+    .schedule-section aside
+    {
+      padding: 10px;
+    }
+    .text h2
+    {
+      font-size: 5em;
+    }
+    .text h3
+    {
+      font-size: 5em;
+    }
+    
+  }
+  @media (max-width: 1147px){
+    .text2 h4
+    {
+      font-size: 2.5em;
+      padding: .5em;
+      display: flex;
+      flex-direction: column;
+      line-height: .9em;
+      align-items: center;
+    }
+  }
+  @media (max-width: 1147px){
+    .showcase .text h2,
+    .showcase .text h3
+    {
+      font-size: 5.5em;
+      padding-left: 1em;
+      display: flex;
+      flex-direction: column;
+      margin: 1% 10% 1% 30%;
+      line-height: .9em;
+      align-items: center;
+    }
+  }
+
+@media (max-width: 375px)
+{
+.showcase header img
+{
+    padding: .5em;
+  }
+}
+
+@media (max-width: 375px){
+  .showcase .text h2,
+  .showcase .text h3
+  {
+    font-size: 3.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: 1% 10% 1% 30%;
+    line-height: .9em;
+    align-items: center;
+  }
+}
+
+/* FORM */
+.container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  align-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container .title{
+  font-size: 35px;
+  font-weight: 500;
+  color: rgb(233, 134, 4);
+  text-transform: uppercase;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  border-radius: 5px;
+  background: linear-gradient(2deg, rgb(233, 134, 4), #ffe815);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: rgb(233, 134, 4)
+}
+
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg,rgb(233, 134, 4), #ffe815);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, rgb(233, 134, 4), #ffe815);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+/* FAQs */
+aside h5{
+  font-size: 2.5em;
+  text-align: center;
+  margin: 2rem 0;
+  color: rgb(233, 134, 4);
+}
+
+.faq-scetion{
+  width: 50%;
+  float: left;
+}
+
+.accordion{
+  width: 75%;
+  max-width: 1000px;
+  margin: 2rem 20%;
+  padding-bottom: 4rem;
+}
+
+.accordion-item{
+  background-color: #c58205;
+  color: rgb(255, 255, 255);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+}
+
+.accordion-item-header{
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.accordion-item-header.active::after{
+  content: "\2212";
+}
+
+.accordion-item-body{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content{
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid #c58205;
+  border-image: linear-gradient(to right, transparent, #fafafa ) 1;
+}
+@media only screen and (max-width: 480px){
+  .faq-side-img{
+    max-width: 100%;
+    width: 45rem;
+    height: 50%;
+  }
+}
+@media(max-width: 1440px){
+  .accordion{
+    width: 160%;
+
+  }
+  .faq-side-img {
+    display: none;
+  }
+}
+
+@media(max-width: 767px){
+  .accordion html{
+    font-size: 14px;
+  }
+}
+
+/* End FAQs */
+
+/* FAQ Img */
+.faq-side-img{
+    float: left;
+    width: 100%;
+    max-width: 636px;
+    height: auto;
+    padding-top: 27px;
+    padding-right: 10px;
+}
+
+/* Footer */
+
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+  color: #fff;
+}
+.footer{
+	background-color: #000000;
+  padding: 38px 20px 38px 20px;
+  width: 100%;
+  display: -webkit-inline-box;
+}
+.footer-col{
+  width: 25%;
+  padding: 0px 15px 18px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: rgb(233, 134, 4);
+	height: 2px;
+	box-sizing: border-box;
+	width: 179px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: rgb(233, 134, 4);
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+
+
+
